@@ -10,6 +10,7 @@ class handler(BaseHTTPRequestHandler):
 
         # Optionally parse JSON body
         try:
+            print('post_data', post_data)
             data = json.loads(post_data)
         except json.JSONDecodeError:
             data = {"error": "Invalid JSON"}
